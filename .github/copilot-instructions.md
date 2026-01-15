@@ -183,14 +183,14 @@ The Unreal Engine shader compilation system transforms HLSL code into platform-s
 2. **Compilation**: HLSL is compiled by platform-specific compilers (FShaderCompileJob)
 3. **Caching**: Compiled shaders are stored in the DDC for reuse
 
-\```cpp
+```cpp
 // From ShaderCompiler.cpp
 void FShaderCompileThreadRunnable::CompileDirectlyThroughDll()
 {
     // Platform-specific compilation happens here
     // Results are cached in Derived Data Cache
 }
-\```
+```
 
 This approach allows for fast iteration during development while maintaining optimized shaders for shipping builds.
 ```
